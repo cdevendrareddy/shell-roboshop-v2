@@ -15,7 +15,7 @@ check_root(){
     fi
 }
 
-check_root
+check_root # we can call function here as well, if we call here then we don't need to call it in other scripts which are sourcing this common.sh file. But if we want to call it in other scripts then we can comment this line and call it in other scripts.
 
 timestamp(){
     date "+%F %T" 

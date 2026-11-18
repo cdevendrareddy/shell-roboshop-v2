@@ -2,6 +2,7 @@
 
 source ./common.sh
 
+check_root  # calling function from common.sh to check if the script is run as root user
 
 cp mongo.repo /etc/yum.repos.d/mongo.repo
 validate $? "Adding MongoDB repo"
@@ -18,5 +19,7 @@ validate $? "Updating MongoDB config file"
 
 systemctl restart mongod 
 validate $? "Restarting MongoDB service"
+
+
 
 total_time
