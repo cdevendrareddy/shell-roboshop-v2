@@ -3,6 +3,8 @@
 user_id=$(id -u)
 logs_folder="/var/log/shell-practice"
 logs_file="${logs_folder}/${0}.log"
+scripts_dir=$(dirname "$(realpath "$0")")
+domain_name="opsbydev.online"
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
