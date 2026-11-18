@@ -2,6 +2,8 @@
 
 source ./common.sh
 
+check_root 
+
 cp mongo.repo /etc/yum.repos.d/mongo.repo
 validate $? "Adding MongoDB repo"
 
@@ -17,3 +19,5 @@ validate $? "Updating MongoDB config file"
 
 systemctl restart mongod 
 validate $? "Restarting MongoDB service"
+
+total_time
