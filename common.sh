@@ -15,6 +15,8 @@ check_root(){
     fi
 }
 
+check_root
+
 timestamp(){
     date "+%F %T" 
 }
